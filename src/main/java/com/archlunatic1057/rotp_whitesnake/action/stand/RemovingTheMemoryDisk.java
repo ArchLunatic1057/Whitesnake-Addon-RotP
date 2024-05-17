@@ -47,6 +47,7 @@ public class RemovingTheMemoryDisk extends StandEntityAction {
                 MCUtil.runCommand(standUser, "xp set "+target.getName()+" 0 levels");
                 MCUtil.runCommand(standUser, "xp set "+standUser.getName()+" "+experienceLevel+" levels");
             }
+            standEntity.moveTo(target.position());
         }
     }
 
@@ -60,6 +61,8 @@ public class RemovingTheMemoryDisk extends StandEntityAction {
         return TargetRequirement.ENTITY;
     }
 
-
-
+    @Override
+    public boolean noAdheringToUserOffset(IStandPower standPower, StandEntity standEntity) {
+        return true;
+    }
 }

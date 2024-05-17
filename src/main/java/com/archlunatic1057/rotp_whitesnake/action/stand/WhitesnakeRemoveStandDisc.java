@@ -30,6 +30,7 @@ public class WhitesnakeRemoveStandDisc extends StandEntityAction {
             ActionTarget t = task.getTarget();
             if (t.getType() == TargetType.ENTITY && t.getEntity() instanceof LivingEntity) {
                 LivingEntity target = (LivingEntity) t.getEntity();
+                standEntity.moveTo(target.position());
                 IStandPower.getStandPowerOptional(target).ifPresent(power -> {
                     if (power.hasPower()) {
                         Optional<StandInstance> previousDiscStand = power.putOutStand();
@@ -51,4 +52,8 @@ public class WhitesnakeRemoveStandDisc extends StandEntityAction {
         return TargetRequirement.ENTITY;
     }
 
+    @Override
+    public boolean noAdheringToUserOffset(IStandPower standPower, StandEntity standEntity) {
+        return true;
+    }
 }

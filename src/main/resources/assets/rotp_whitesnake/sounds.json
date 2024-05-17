@@ -1,14 +1,20 @@
 {
   "pucci_whitesnake": {
-    "subtitle": "rotp_whitesnake.subtitle.whitesnake.name",
-    "sounds": [ "rotp_whitesnake:stand_user/pucci_whitesnake", "rotp_whitesnake:stand_user/pucci_whitesnake_2", "rotp_whitesnake:stand_user/pucci_whitesnake_3", "rotp_whitesnake:stand_user/pucci_whitesnake_4" ]
+    "sounds": [ "rotp_whitesnake:stand_user/pucci_whitesnake",
+      "rotp_whitesnake:stand_user/pucci_whitesnake_2",
+      "rotp_whitesnake:stand_user/pucci_whitesnake_3",
+      "rotp_whitesnake:stand_user/pucci_whitesnake_4" ]
   },
-  "whitesnake_remove_stand_disc": {
-    "subtitle": "rotp_whitesnake.subtitle.whitesnake_remove_stand_disc",
-    "sounds": ["rotp_whitesnake:stand/whitesnake_remove_stand_disc", "rotp_whitesnake:stand/whitesnake_remove_stand_disc_1"]
+  "whitesnake_remove_disc": {
+    "sounds": ["rotp_whitesnake:stand/whitesnake_remove_stand_disc1",
+      "rotp_whitesnake:stand/whitesnake_remove_stand_disc2",
+      "rotp_whitesnake:stand/whitesnake_remove_stand_disc3",
+      "rotp_whitesnake:stand/whitesnake_remove_stand_disc4"]
   },
     "whitesnake_ushya": {
-      "subtitle": "rotp_whitesnake.subtitle.whitesnake_ushya",
       "sounds": ["rotp_whitesnake:stand/whitesnake_ushya"]
+  },
+  "whitesnake_barrage": {
+    "sounds": ["rotp_whitesnake:stand/whitesnake_barrage_sound"]
   }
 }

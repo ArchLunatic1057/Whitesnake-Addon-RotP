@@ -6,6 +6,7 @@ import com.archlunatic1057.rotp_whitesnake.action.stand.*;
 import com.github.standobyte.jojo.action.Action;
 import com.github.standobyte.jojo.action.stand.*;
 import com.github.standobyte.jojo.entity.stand.StandEntityType;
+import com.github.standobyte.jojo.init.ModSounds;
 import com.github.standobyte.jojo.init.power.stand.EntityStandRegistryObject;
 import com.github.standobyte.jojo.init.power.stand.ModStandsInit;
 import com.github.standobyte.jojo.power.impl.stand.StandInstance.StandPart;
@@ -23,7 +24,7 @@ public class InitStands {
     public static final DeferredRegister<StandType<?>> STANDS = DeferredRegister.create(
             (Class<StandType<?>>) ((Class<?>) StandType.class), RotpWhitesnakeAddon.MOD_ID);
     
- // ======================================== WhitesnakeModel ========================================
+ // ======================================== Whitesnake ========================================
     
     public static final RegistryObject<StandEntityAction> WHITESNAKE_PUNCH = ACTIONS.register("whitesnake_punch", 
             () -> new StandEntityLightAttack(new StandEntityLightAttack.Builder()
@@ -32,7 +33,8 @@ public class InitStands {
 
     public static final RegistryObject<StandEntityAction> WHITESNAKE_BARRAGE = ACTIONS.register("whitesnake_barrage", 
             () -> new StandEntityMeleeBarrage(new StandEntityMeleeBarrage.Builder()
-                    .barrageHitSound(InitSounds.WHITESNAKE_BARRAGE)));
+                    .barrageHitSound(ModSounds.THE_WORLD_PUNCH_BARRAGE)
+                    .standSound(InitSounds.WHITESNAKE_BARRAGE)));
     
     public static final RegistryObject<StandEntityHeavyAttack> WHITESNAKE_COMBO_PUNCH = ACTIONS.register("whitesnake_combo_punch", 
             () -> new StandEntityHeavyAttack(new StandEntityHeavyAttack.Builder()
@@ -51,21 +53,21 @@ public class InitStands {
             () -> new StandEntityBlock());
 
     public static final RegistryObject<Blindness> BLINDNESS = ACTIONS.register("blindness",
-            () -> new Blindness(new Blindness.Builder().holdType().staminaCostTick(50F)
-                    .resolveLevelToUnlock(2)
+            () -> new Blindness(new Blindness.Builder().holdType().staminaCost(50)
+                    .resolveLevelToUnlock(3)
                     .holdToFire(15, false)
                     .partsRequired(StandPart.ARMS)));
 
     public static final RegistryObject<RemovingTheMemoryDisk> REMOVING_THE_MEMORY_DISK = ACTIONS.register("removing_the_memory_disk",
-            () -> new RemovingTheMemoryDisk(new RemovingTheMemoryDisk.Builder().cooldown(20).standPose(WhitesnakeRemoveStandDisc.REMOVE_DISC)
-                    .standSound(InitSounds.WHITESNAKE_REMOVE_STAND_DISC).standPerformDuration(5)
+            () -> new RemovingTheMemoryDisk(new RemovingTheMemoryDisk.Builder().cooldown(70).standPose(WhitesnakeRemoveStandDisc.REMOVE_DISC)
+                    .standSound(InitSounds.WHITESNAKE_REMOVE_DISC).standPerformDuration(5).staminaCost(200)
                     .resolveLevelToUnlock(2)
                     .holdToFire(15, true)
                     .partsRequired(StandPart.ARMS)));
 
     public static final RegistryObject<StandEntityAction> WHITESNAKE_REMOVE_STAND_DISC = ACTIONS.register("whitesnake_remove_stand_disc",
-            () -> new WhitesnakeRemoveStandDisc(new WhitesnakeRemoveStandDisc.Builder().holdType().staminaCostTick(1000F).standPose(WhitesnakeRemoveStandDisc.REMOVE_DISC).cooldown(200)
-                    .standSound(InitSounds.WHITESNAKE_REMOVE_STAND_DISC)
+            () -> new WhitesnakeRemoveStandDisc(new WhitesnakeRemoveStandDisc.Builder().holdType().staminaCost(200).standPose(WhitesnakeRemoveStandDisc.REMOVE_DISC)
+                    .standSound(InitSounds.WHITESNAKE_REMOVE_DISC).cooldown(70)
                     .standPerformDuration(5)
                     .resolveLevelToUnlock(0)
                     .holdToFire(10, true)
@@ -85,8 +87,8 @@ public class InitStands {
                             )
                             .rightClickHotbar(
                                     WHITESNAKE_BLOCK.get(),
-                                    BLINDNESS.get(),
-                                    REMOVING_THE_MEMORY_DISK.get()
+                                    REMOVING_THE_MEMORY_DISK.get(),
+                                    BLINDNESS.get()
                             )
                             .defaultStats(StandStats.class, new StandStats.Builder()
                                     .tier(6)

@@ -25,10 +25,11 @@ public class InitSounds {
     
     public static final Supplier<SoundEvent> WHITESNAKE_PUNCH_HEAVY = ModSounds.STAND_PUNCH_HEAVY;
     
-    public static final Supplier<SoundEvent> WHITESNAKE_BARRAGE = ModSounds.STAND_PUNCH_LIGHT;
+    public static final Supplier<SoundEvent> WHITESNAKE_BARRAGE = SOUNDS.register("whitesnake_barrage",
+            () -> new SoundEvent(new ResourceLocation(RotpWhitesnakeAddon.MOD_ID, "whitesnake_barrage")));
 
-    public static final RegistryObject<SoundEvent> WHITESNAKE_REMOVE_STAND_DISC = SOUNDS.register("whitesnake_remove_stand_disc",
-            () -> new SoundEvent(new ResourceLocation(RotpWhitesnakeAddon.MOD_ID, "whitesnake_remove_stand_disc")));
+    public static final RegistryObject<SoundEvent> WHITESNAKE_REMOVE_DISC = SOUNDS.register("whitesnake_remove_disc",
+            () -> new SoundEvent(new ResourceLocation(RotpWhitesnakeAddon.MOD_ID, "whitesnake_remove_disc")));
 
     public static final RegistryObject<SoundEvent> WHITESNAKE_USHYA = SOUNDS.register("whitesnake_ushya",
             () -> new SoundEvent(new ResourceLocation(RotpWhitesnakeAddon.MOD_ID, "whitesnake_ushya")));

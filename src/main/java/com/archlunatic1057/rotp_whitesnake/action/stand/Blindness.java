@@ -28,26 +28,25 @@ public class Blindness extends StandEntityAction {
     public void standPerform(World world, StandEntity standEntity, IStandPower userPower, StandEntityTask task) {
         if (!world.isClientSide()) {
             LivingEntity user = userPower.getUser();
-            if(isShiftVariation()) {
+//            if(user.isShiftKeyDown()) {
                 if (!user.hasEffect(Effects.BLINDNESS)) {
                     user.addEffect(new EffectInstance(Effects.BLINDNESS, 99999999, 999999, false, false, false));
                 } else {
                     user.removeEffect(Effects.BLINDNESS);
                 }
-            }else {
-                if (task.getTarget().getType() == ActionTarget.TargetType.ENTITY && task.getTarget().getEntity() instanceof LivingEntity) {
-                    LivingEntity target = StandUtil.getStandUser((LivingEntity) task.getTarget().getEntity());
-                    target.addEffect(new EffectInstance(Effects.BLINDNESS, 2000, 9));
-
-                    if (target instanceof MobEntity) {
-                    }
-                    IStandPower.getStandPowerOptional(target).ifPresent(power -> {
-                        if (power.isActive() && power.getStandManifestation() instanceof StandEntity) {
-                            ((StandEntity) power.getStandManifestation()).addEffect(new EffectInstance(Effects.BLINDNESS, 200, 9));
-                        }
-                    });
-                }
-            }
+//            }else {
+//                if (task.getTarget().getType() == ActionTarget.TargetType.ENTITY && task.getTarget().getEntity() instanceof LivingEntity) {
+//                    LivingEntity target = StandUtil.getStandUser((LivingEntity) task.getTarget().getEntity());
+//                    target.addEffect(new EffectInstance(Effects.BLINDNESS, 99999999, 999999, false, false, false));
+//                    if (target instanceof MobEntity) {
+//                    }
+//                    IStandPower.getStandPowerOptional(target).ifPresent(power -> {
+//                        if (power.isActive() && power.getStandManifestation() instanceof StandEntity) {
+//                            ((StandEntity) power.getStandManifestation()).addEffect(new EffectInstance(Effects.BLINDNESS, 99999999, 999999, false, false, false));
+//                        }
+//                    });
+//                }
+//            }
         }
     }
 

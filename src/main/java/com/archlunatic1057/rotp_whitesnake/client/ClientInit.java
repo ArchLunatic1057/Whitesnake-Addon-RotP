@@ -2,8 +2,8 @@ package com.archlunatic1057.rotp_whitesnake.client;
 
 import com.archlunatic1057.rotp_whitesnake.RotpWhitesnakeAddon;
 import com.archlunatic1057.rotp_whitesnake.client.render.entity.renderer.stand.WhitesnakeRenderer;
-import com.archlunatic1057.rotp_whitesnake.init.AddonStands;
 
+import com.archlunatic1057.rotp_whitesnake.init.InitStands;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
@@ -15,6 +15,7 @@ public class ClientInit {
     
     @SubscribeEvent
     public static void onFMLClientSetup(FMLClientSetupEvent event) {
-        RenderingRegistry.registerEntityRenderingHandler(AddonStands.WHITESNAKE.getEntityType(), WhitesnakeRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(
+                InitStands.WHITESNAKE.getEntityType(), WhitesnakeRenderer::new);
     }
 }

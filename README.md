@@ -1,2 +1,2 @@
-# ![Whitesnake](https://cdn.discordapp.com/attachments/1008097733732745248/1145366100624814101/Tutorial_Stand.png) Whitesnake (Ripples of the Past addon)
+# ![Whitesnake](https://discord.com/channels/@me/1072589243051937836/1241044123968864296) (Ripples of the Past addon)
 An addon mod for [Ripples of the Past](https://github.com/StandoByte/Ripples-of-the-Past), a mod for Minecraft based on JoJo's Bizarre Adventure.

@@ -9,5 +9,5 @@ import com.github.standobyte.jojo.power.impl.stand.type.EntityStandType;
 public class AddonStands {
 
     public static final EntityStandSupplier<EntityStandType<StandStats>, StandEntityType<WhitesnakeEntity>>
-    WHITESNAKE = new EntityStandSupplier<>(InitStands.STAND_WHITESNAKE);
+    WHITESNAKE = new EntityStandSupplier<>(InitStands.WHITESNAKE);
 }
