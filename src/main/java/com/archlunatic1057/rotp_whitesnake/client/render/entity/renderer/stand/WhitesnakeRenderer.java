@@ -1,8 +1,8 @@
-package com.bigking123.rotp_whitesnake.client.render.entity.renderer.stand;
+package com.archlunatic1057.rotp_whitesnake.client.render.entity.renderer.stand;
 
-import com.bigking123.rotp_whitesnake.RotpWhitesnakeAddon;
-import com.bigking123.rotp_whitesnake.client.render.entity.model.stand.WhitesnakeModel;
-import com.bigking123.rotp_whitesnake.entity.stand.stands.WhitesnakeEntity;
+import com.archlunatic1057.rotp_whitesnake.RotpWhitesnakeAddon;
+import com.archlunatic1057.rotp_whitesnake.client.render.entity.model.stand.WhitesnakeModel;
+import com.archlunatic1057.rotp_whitesnake.entity.stand.stands.WhitesnakeEntity;
 import com.github.standobyte.jojo.client.render.entity.renderer.stand.StandEntityRenderer;
 
 import net.minecraft.client.renderer.entity.EntityRendererManager;

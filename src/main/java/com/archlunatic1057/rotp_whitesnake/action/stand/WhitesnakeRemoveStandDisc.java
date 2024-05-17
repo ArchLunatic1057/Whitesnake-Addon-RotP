@@ -1,4 +1,4 @@
-package com.bigking123.rotp_whitesnake.action.stand;
+package com.archlunatic1057.rotp_whitesnake.action.stand;
 
 import com.github.standobyte.jojo.action.ActionTarget;
 import com.github.standobyte.jojo.action.ActionTarget.TargetType;
@@ -18,7 +18,7 @@ import net.minecraft.world.World;
 import java.util.Optional;
 
 public class WhitesnakeRemoveStandDisc extends StandEntityAction {
-    public static final StandPose WIND_BLOW = new StandPose("WHITESNAKE_REMOVE_STAND_DISC");
+    public static final StandPose REMOVE_DISC = new StandPose("WHITESNAKE_REMOVE_STAND_DISC");
 
     public WhitesnakeRemoveStandDisc(StandEntityAction.Builder builder) {
         super(builder);

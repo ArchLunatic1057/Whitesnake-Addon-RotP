@@ -1,8 +1,8 @@
-package com.bigking123.rotp_whitesnake.init;
+package com.archlunatic1057.rotp_whitesnake.init;
 
-import com.bigking123.rotp_whitesnake.entity.stand.stands.WhitesnakeEntity;
-import com.bigking123.rotp_whitesnake.RotpWhitesnakeAddon;
-import com.bigking123.rotp_whitesnake.action.stand.*;
+import com.archlunatic1057.rotp_whitesnake.entity.stand.stands.WhitesnakeEntity;
+import com.archlunatic1057.rotp_whitesnake.RotpWhitesnakeAddon;
+import com.archlunatic1057.rotp_whitesnake.action.stand.*;
 import com.github.standobyte.jojo.action.Action;
 import com.github.standobyte.jojo.action.stand.*;
 import com.github.standobyte.jojo.entity.stand.StandEntityType;
@@ -10,7 +10,6 @@ import com.github.standobyte.jojo.init.power.stand.EntityStandRegistryObject;
 import com.github.standobyte.jojo.init.power.stand.ModStandsInit;
 import com.github.standobyte.jojo.power.impl.stand.StandInstance.StandPart;
 import com.github.standobyte.jojo.power.impl.stand.stats.StandStats;
-import com.github.standobyte.jojo.power.impl.stand.stats.TimeStopperStandStats;
 import com.github.standobyte.jojo.power.impl.stand.type.EntityStandType;
 import com.github.standobyte.jojo.power.impl.stand.type.StandType;
 import net.minecraftforge.fml.RegistryObject;
@@ -58,14 +57,14 @@ public class InitStands {
                     .partsRequired(StandPart.ARMS)));
 
     public static final RegistryObject<RemovingTheMemoryDisk> REMOVING_THE_MEMORY_DISK = ACTIONS.register("removing_the_memory_disk",
-            () -> new RemovingTheMemoryDisk(new RemovingTheMemoryDisk.Builder().cooldown(20).standPose(WhitesnakeRemoveStandDisc.WIND_BLOW)
+            () -> new RemovingTheMemoryDisk(new RemovingTheMemoryDisk.Builder().cooldown(20).standPose(WhitesnakeRemoveStandDisc.REMOVE_DISC)
                     .standSound(InitSounds.WHITESNAKE_REMOVE_STAND_DISC).standPerformDuration(5)
                     .resolveLevelToUnlock(2)
                     .holdToFire(15, true)
                     .partsRequired(StandPart.ARMS)));
 
     public static final RegistryObject<StandEntityAction> WHITESNAKE_REMOVE_STAND_DISC = ACTIONS.register("whitesnake_remove_stand_disc",
-            () -> new WhitesnakeRemoveStandDisc(new WhitesnakeRemoveStandDisc.Builder().holdType().staminaCostTick(1000F).standPose(WhitesnakeRemoveStandDisc.WIND_BLOW).cooldown(200)
+            () -> new WhitesnakeRemoveStandDisc(new WhitesnakeRemoveStandDisc.Builder().holdType().staminaCostTick(1000F).standPose(WhitesnakeRemoveStandDisc.REMOVE_DISC).cooldown(200)
                     .standSound(InitSounds.WHITESNAKE_REMOVE_STAND_DISC)
                     .standPerformDuration(5)
                     .resolveLevelToUnlock(0)
@@ -74,7 +73,7 @@ public class InitStands {
                     .shiftVariationOf(REMOVING_THE_MEMORY_DISK)
                     .partsRequired(StandPart.ARMS)));
 
-    public static final EntityStandRegistryObject<EntityStandType<StandStats>, StandEntityType<WhitesnakeEntity>> STAND_WHITESNAKE = 
+    public static final EntityStandRegistryObject<EntityStandType<StandStats>, StandEntityType<WhitesnakeEntity>> WHITESNAKE =
             new EntityStandRegistryObject<>("whitesnake", 
                     STANDS,
                     () -> new EntityStandType.Builder<StandStats>()

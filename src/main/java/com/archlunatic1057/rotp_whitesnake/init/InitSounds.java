@@ -1,6 +1,6 @@
-package com.bigking123.rotp_whitesnake.init;
+package com.archlunatic1057.rotp_whitesnake.init;
 
-import com.bigking123.rotp_whitesnake.RotpWhitesnakeAddon;
+import com.archlunatic1057.rotp_whitesnake.RotpWhitesnakeAddon;
 import com.github.standobyte.jojo.init.ModSounds;
 import com.github.standobyte.jojo.util.mc.OstSoundList;
 import net.minecraft.util.ResourceLocation;

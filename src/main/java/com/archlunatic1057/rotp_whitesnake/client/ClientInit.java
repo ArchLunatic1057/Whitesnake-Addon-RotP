@@ -1,8 +1,8 @@
-package com.bigking123.rotp_whitesnake.client;
+package com.archlunatic1057.rotp_whitesnake.client;
 
-import com.bigking123.rotp_whitesnake.RotpWhitesnakeAddon;
-import com.bigking123.rotp_whitesnake.client.render.entity.renderer.stand.WhitesnakeRenderer;
-import com.bigking123.rotp_whitesnake.init.AddonStands;
+import com.archlunatic1057.rotp_whitesnake.RotpWhitesnakeAddon;
+import com.archlunatic1057.rotp_whitesnake.client.render.entity.renderer.stand.WhitesnakeRenderer;
+import com.archlunatic1057.rotp_whitesnake.init.AddonStands;
 
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

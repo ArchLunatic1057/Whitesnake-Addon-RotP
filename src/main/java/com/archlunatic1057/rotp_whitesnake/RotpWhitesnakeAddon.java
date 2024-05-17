@@ -1,8 +1,8 @@
-package com.bigking123.rotp_whitesnake;
+package com.archlunatic1057.rotp_whitesnake;
 
-import com.bigking123.rotp_whitesnake.init.InitEntities;
-import com.bigking123.rotp_whitesnake.init.InitSounds;
-import com.bigking123.rotp_whitesnake.init.InitStands;
+import com.archlunatic1057.rotp_whitesnake.init.InitEntities;
+import com.archlunatic1057.rotp_whitesnake.init.InitSounds;
+import com.archlunatic1057.rotp_whitesnake.init.InitStands;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
