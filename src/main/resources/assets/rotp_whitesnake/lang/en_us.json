@@ -11,6 +11,7 @@
   "action.rotp_whitesnake.whitesnake_remove_stand_disc": "Removing Stand Disc",
   "action.rotp_whitesnake.melt_your_heart": "Melt Your Heart",
   "action.rotp_whitesnake.blindness": "Removing Eyes",
+  "action.rotp_whitesnake.blindness_disable": "Restoring Eyes",
   "action.rotp_whitesnake.removing_the_memory_disk": "Removing Memory Disk",
 
   "rotp_whitesnake.subtitle.whitesnake_name": "\"Whitesnake\""

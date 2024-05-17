@@ -2,16 +2,17 @@
   "entity.rotp_whitesnake.whitesnake": "Whitesnake",
   "stand.rotp_whitesnake.whitesnake": "Whitesnake",
 
-  "action.rotp_whitesnake.whitesnake_punch": "Удар",
-  "action.rotp_whitesnake.whitesnake_heavy_punch": "Тяжёлый удар",
-  "action.rotp_whitesnake.whitesnake_combo_punch": "Комбо удар",
-  "action.rotp_whitesnake.whitesnake_barrage": "Шквал ударов",
+  "action.rotp_whitesnake.whitesnake_punch": "РЈРґР°СЂ",
+  "action.rotp_whitesnake.whitesnake_heavy_punch": "РўСЏР¶С‘Р»С‹Р№ СѓРґР°СЂ",
+  "action.rotp_whitesnake.whitesnake_combo_punch": "РљРѕРјР±Рѕ СѓРґР°СЂ",
+  "action.rotp_whitesnake.whitesnake_barrage": "РЁРєРІР°Р» СѓРґР°СЂРѕРІ",
 
-  "action.rotp_whitesnake.whitesnake_block": "Блок",
-  "action.rotp_whitesnake.whitesnake_remove_stand_disc": "Извлечь ДИСК стенда",
+  "action.rotp_whitesnake.whitesnake_block": "Р‘Р»РѕРє",
+  "action.rotp_whitesnake.whitesnake_remove_stand_disc": "РР·РІР»РµС‡СЊ Р”РРЎРљ СЃС‚РµРЅРґР°",
   "action.rotp_whitesnake.melt_your_heart": "Melt Your Heart",
-  "action.rotp_whitesnake.blindness": "Лишиться зрения",
-  "action.rotp_whitesnake.removing_the_memory_disk": "Извлечь ДИСК память",
+  "action.rotp_whitesnake.blindness": "Р›РёС€РёС‚СЊСЃСЏ Р·СЂРµРЅРёСЏ",
+  "action.rotp_whitesnake.blindness_disable": "Р’РѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ Р·СЂРµРЅРёРµ",
+  "action.rotp_whitesnake.removing_the_memory_disk": "РР·РІР»РµС‡СЊ Р”РРЎРљ РїР°РјСЏС‚Рё",
 
   "rotp_whitesnake.subtitle.whitesnake_name": "\"Whitesnake\""
 }

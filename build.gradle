@@ -13,7 +13,7 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
 version = "${addon_version}"
-group = 'com.bigking123.rotp_whitesnake' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group = 'com.archlunatic1057.rotp_whitesnake' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'RotP-Whitesnake'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(8) // Mojang ships Java 8 to end users, so your mod should target Java 8.
@@ -151,7 +151,7 @@ dependencies {
 jar {
     manifest {
         attributes([
-                "Specification-Title": "RotP_Catch-the-Rainbow",
+                "Specification-Title": "RotP_Whitesnake",
                 "Specification-Vendor": "RotP_WTsareus",
                 "Specification-Version": "1", // We are version 1 of ourselves
                 "Implementation-Title": project.name,
