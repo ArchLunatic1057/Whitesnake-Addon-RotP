@@ -16,5 +16,11 @@
   },
   "whitesnake_barrage": {
     "sounds": ["rotp_whitesnake:stand/whitesnake_barrage_sound"]
+  },
+  "pucci_remove_disk": {
+    "sounds": ["rotp_whitesnake:stand_user/pucci_remove_disk"]
+  },
+  "whitesnake_ost": {
+    "sounds": ["rotp_whitesnake:whitesnake_ost"]
   }
 }

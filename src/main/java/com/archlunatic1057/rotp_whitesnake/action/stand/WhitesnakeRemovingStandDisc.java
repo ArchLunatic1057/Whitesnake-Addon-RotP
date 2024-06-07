@@ -1,5 +1,7 @@
 package com.archlunatic1057.rotp_whitesnake.action.stand;
 
+import com.archlunatic1057.rotp_whitesnake.init.InitStands;
+import com.github.standobyte.jojo.action.Action;
 import com.github.standobyte.jojo.action.ActionTarget;
 import com.github.standobyte.jojo.action.ActionTarget.TargetType;
 import com.github.standobyte.jojo.action.stand.StandEntityAction;
@@ -13,14 +15,15 @@ import com.github.standobyte.jojo.power.impl.stand.StandInstance;
 import com.github.standobyte.jojo.util.mc.MCUtil;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
 import java.util.Optional;
 
-public class WhitesnakeRemoveStandDisc extends StandEntityAction {
+public class WhitesnakeRemovingStandDisc extends StandEntityAction {
     public static final StandPose REMOVE_DISC = new StandPose("WHITESNAKE_REMOVE_STAND_DISC");
 
-    public WhitesnakeRemoveStandDisc(StandEntityAction.Builder builder) {
+    public WhitesnakeRemovingStandDisc(StandEntityAction.Builder builder) {
         super(builder);
     }
 
@@ -39,6 +42,8 @@ public class WhitesnakeRemoveStandDisc extends StandEntityAction {
                     }
                 });
             }
+            Action<?> RemovingTheMemoryDisk = InitStands.REMOVING_THE_MEMORY_DISK.get();
+            userPower.setCooldownTimer(RemovingTheMemoryDisk, 100);
         }
     }
 
@@ -50,6 +55,11 @@ public class WhitesnakeRemoveStandDisc extends StandEntityAction {
     @Override
     public TargetRequirement getTargetRequirement() {
         return TargetRequirement.ENTITY;
+    }
+
+    @Override
+    public boolean cancelHeldOnGettingAttacked(IStandPower power, DamageSource dmgSource, float dmgAmount) {
+        return true;
     }
 
     @Override

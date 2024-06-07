@@ -34,6 +34,9 @@ public class InitSounds {
     public static final RegistryObject<SoundEvent> WHITESNAKE_USHYA = SOUNDS.register("whitesnake_ushya",
             () -> new SoundEvent(new ResourceLocation(RotpWhitesnakeAddon.MOD_ID, "whitesnake_ushya")));
 
+    public static final RegistryObject<SoundEvent> PUCCI_REMOVE_DISK = SOUNDS.register("pucci_remove_disk",
+            () -> new SoundEvent(new ResourceLocation(RotpWhitesnakeAddon.MOD_ID, "pucci_remove_disk")));
+
 
     static final OstSoundList WHITESNAKE_OST = new OstSoundList(new ResourceLocation(RotpWhitesnakeAddon.MOD_ID, "whitesnake_ost"), SOUNDS);
 

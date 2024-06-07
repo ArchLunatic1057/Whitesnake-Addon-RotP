@@ -1,11 +1,10 @@
 package com.archlunatic1057.rotp_whitesnake.client.render.entity.model.stand;
 
+import com.archlunatic1057.rotp_whitesnake.action.stand.WhitesnakeRemovingStandDisc;
 import com.archlunatic1057.rotp_whitesnake.entity.stand.stands.WhitesnakeEntity;
-import com.archlunatic1057.rotp_whitesnake.action.stand.WhitesnakeRemoveStandDisc;
 import com.github.standobyte.jojo.action.stand.StandEntityAction;
 import com.github.standobyte.jojo.client.render.entity.model.stand.HumanoidStandModel;
 import com.github.standobyte.jojo.client.render.entity.pose.ModelPose;
-import com.github.standobyte.jojo.client.render.entity.pose.ModelPoseTransition;
 import com.github.standobyte.jojo.client.render.entity.pose.ModelPoseTransitionMultiple;
 import com.github.standobyte.jojo.client.render.entity.pose.RotationAngle;
 import com.github.standobyte.jojo.client.render.entity.pose.anim.PosedActionAnimation;
@@ -89,7 +88,7 @@ public class WhitesnakeModel extends HumanoidStandModel<WhitesnakeEntity> {
 				RotationAngle.fromDegrees(rightLeg, -17.94067, -9.99038, 2.53852),
 				RotationAngle.fromDegrees(rightLowerLeg, 60, 0, 0)
 		});
-		actionAnim.put(WhitesnakeRemoveStandDisc.REMOVE_DISC, new PosedActionAnimation.Builder<WhitesnakeEntity>()
+		actionAnim.put(WhitesnakeRemovingStandDisc.REMOVE_DISC, new PosedActionAnimation.Builder<WhitesnakeEntity>()
 				.addPose(StandEntityAction.Phase.BUTTON_HOLD, new ModelPoseTransition<>(removeDiscPose1, removeDiscPose2))
 				.addPose(StandEntityAction.Phase.WINDUP, new ModelPoseTransition<>(removeDiscPose1, removeDiscPose2))
 				.addPose(StandEntityAction.Phase.PERFORM, new ModelPoseTransitionMultiple.Builder<>(removeDiscPose2)
@@ -139,7 +138,7 @@ public class WhitesnakeModel extends HumanoidStandModel<WhitesnakeEntity> {
 				RotationAngle.fromDegrees(rightLeg, -17.94067, -9.99038, 2.53852),
 				RotationAngle.fromDegrees(rightLowerLeg, 60, 0, 0)
 		});
-		actionAnim.put(WhitesnakeRemoveStandDisc.REMOVE_DISC, new PosedActionAnimation.Builder<WhitesnakeEntity>()
+		actionAnim.put(WhitesnakeRemovingStandDisc.REMOVE_DISC, new PosedActionAnimation.Builder<WhitesnakeEntity>()
 				.addPose(StandEntityAction.Phase.BUTTON_HOLD, new ModelPoseTransitionMultiple.Builder<>(idlePose)
 						.addPose(0.1F, handPose1)
 						.addPose(0.75F, handPose2)
